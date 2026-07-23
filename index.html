@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KTB Nutrition · Katerina T. Boskova</title>
+  <style>
+    :root {
+      --ink: #111111;
+      --paper: #ffffff;
+      --muted: #666666;
+      --line: #e2e2e2;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { -webkit-font-smoothing: antialiased; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 440px;
+      text-align: center;
+    }
+
+    .mark {
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: 2rem;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    .role {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+
+    .tagline {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--ink);
+      margin-bottom: 2.5rem;
+    }
+
+    .rule {
+      width: 40px;
+      height: 1px;
+      background: var(--ink);
+      margin: 0 auto 2.5rem;
+    }
+
+    .about {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    .contact a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1px;
+      transition: border-color 0.2s ease;
+    }
+
+    .contact a:hover { border-color: var(--ink); }
+
+    .contact .meta { color: var(--muted); }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      color: #aaaaaa;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.7rem; }
+      .tagline { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="mark">KTB Nutrition</div>
+
+    <h1>Katerina T. Boskova</h1>
+    <div class="role">Nutrition Consultant</div>
+
+    <p class="tagline">Evidence-led nutrition, tailored to real life.</p>
+
+    <div class="rule"></div>
+
+    <p class="about">
+      A holistic, one-to-one practice looking at what your body actually needs —
+      and helping you make changes you can stick with. Grounded in science and
+      nearly two decades of study across nutrition, biology and behaviour.
+    </p>
+
+    <div class="contact">
+      <a href="mailto:k.boskova@gmail.com">k.boskova@gmail.com</a>
+      <span class="meta">Prague, Czech Republic</span>
+      <span class="meta">Consultations in person or online</span>
+    </div>
+
+    <footer>© 2026 Katerina T. Boskova</footer>
+  </main>
+</body>
+</html>
