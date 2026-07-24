@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KTB Nutrition · Katerina Thomas Boskova</title>
-  <meta name="description" content="KTB Nutrition — a holistic, one-to-one nutrition practice by Katerina Thomas Boskova in Prague. Evidence-led support, in person or online." />
+  <meta name="description" content="KTB Nutrition — a private nutrition consultancy by Katerina Thomas Boskova in Prague. Thoughtful, research-informed support with digestive health, food intolerances, women's health, and lasting dietary change." />
   <link rel="canonical" href="https://ktbnutrition.com/" />
 
   <!-- Favicon -->
@@ -15,14 +15,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="KTB Nutrition" />
   <meta property="og:title" content="KTB Nutrition · Katerina Thomas Boskova" />
-  <meta property="og:description" content="A holistic, one-to-one nutrition practice in Prague. Evidence-led nutrition, tailored to real life." />
+  <meta property="og:description" content="A private nutrition consultancy in Prague. Evidence-led nutrition, tailored to real life." />
   <meta property="og:url" content="https://ktbnutrition.com/" />
   <meta property="og:image" content="https://ktbnutrition.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="KTB Nutrition · Katerina Thomas Boskova" />
-  <meta name="twitter:description" content="A holistic, one-to-one nutrition practice in Prague. Evidence-led nutrition, tailored to real life." />
+  <meta name="twitter:description" content="A private nutrition consultancy in Prague. Evidence-led nutrition, tailored to real life." />
   <meta name="twitter:image" content="https://ktbnutrition.com/og-image.png" />
 
   <style>
@@ -30,46 +30,126 @@
       --ink: #111111;
       --paper: #ffffff;
       --muted: #666666;
-      --line: #e2e2e2;
+      --faint: #767676;
+      --line: #e6e6e6;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html { -webkit-font-smoothing: antialiased; }
+    html {
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--paper);
       color: var(--ink);
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    .serif { font-family: Georgia, "Times New Roman", serif; }
+
+    a { color: inherit; }
+
+    /* ---------- Nav ---------- */
+    header.nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: saturate(180%) blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 2rem;
+      justify-content: space-between;
+      gap: 1rem;
     }
 
-    .card {
-      width: 100%;
-      max-width: 440px;
-      text-align: center;
+    .brand {
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      white-space: nowrap;
     }
 
-    .mark {
-      font-size: 0.75rem;
-      letter-spacing: 0.35em;
+    .nav-links {
+      display: flex;
+      gap: 1.4rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 2.5rem;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    /* ---------- Layout ---------- */
+    section {
+      scroll-margin-top: 72px;
+    }
+
+    .wrap {
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 1.7rem;
+      letter-spacing: 0.01em;
+      line-height: 1.25;
+      margin-bottom: 1.6rem;
+    }
+
+    p { margin-bottom: 1.1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      text-align: center;
+      padding: 5rem 1.5rem 4.5rem;
+    }
+
+    .hero .mark {
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.25rem;
     }
 
     h1 {
-      font-family: Georgia, "Times New Roman", serif;
       font-weight: 400;
-      font-size: 2rem;
+      font-size: 2.15rem;
       letter-spacing: 0.01em;
       line-height: 1.2;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.55rem;
     }
 
     .role {
@@ -84,38 +164,30 @@
       font-size: 0.82rem;
       color: var(--muted);
       line-height: 1.5;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2.25rem;
     }
 
     .tagline {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.15rem;
+      font-size: 1.35rem;
       font-style: italic;
       color: var(--ink);
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.5rem;
     }
 
-    .rule {
-      width: 40px;
-      height: 1px;
-      background: var(--ink);
-      margin: 0 auto 2.5rem;
-    }
-
-    .about {
-      font-size: 0.95rem;
+    .hero .intro {
+      max-width: 540px;
+      margin: 0 auto 2.25rem;
       color: #333;
-      margin-bottom: 2.5rem;
     }
 
+    /* ---------- Buttons ---------- */
     .cta {
       display: inline-block;
-      margin-bottom: 2.75rem;
-      padding: 0.85rem 1.7rem;
+      padding: 0.9rem 1.8rem;
       background: var(--ink);
       color: var(--paper);
       text-decoration: none;
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       border: 1px solid var(--ink);
@@ -124,17 +196,93 @@
 
     .cta:hover { background: var(--paper); color: var(--ink); }
 
-    .contact {
+    /* ---------- Sections ---------- */
+    .band {
+      padding: 4.5rem 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .about p { color: #333; }
+
+    .focus-intro {
+      color: #333;
+      margin-bottom: 2.5rem;
+    }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.25rem 2.5rem;
+    }
+
+    .focus-item h3 {
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+      margin-bottom: 0.5rem;
+    }
+
+    .focus-item p {
+      font-size: 0.92rem;
+      color: #444;
+      margin-bottom: 0;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.6rem;
+      padding: 1.6rem 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .step:first-of-type { border-top: none; padding-top: 0; }
+
+    .step .num {
+      font-size: 1.6rem;
+      color: #c9c9c9;
+      line-height: 1;
+      padding-top: 0.1rem;
+    }
+
+    .step h3 {
+      font-weight: 600;
+      font-size: 1.02rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .step p {
+      font-size: 0.94rem;
+      color: #444;
+      margin-bottom: 0;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-band { text-align: center; }
+
+    .contact-band .copy {
+      max-width: 520px;
+      margin: 0 auto 1rem;
+      color: #333;
+    }
+
+    .contact-band .note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .contact-lines {
+      margin-top: 2.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0.4rem;
       font-size: 0.85rem;
       color: var(--muted);
-      letter-spacing: 0.02em;
     }
 
-    .contact a {
+    .contact-lines a {
       color: var(--ink);
       text-decoration: none;
       border-bottom: 1px solid var(--line);
@@ -142,50 +290,163 @@
       transition: border-color 0.2s ease;
     }
 
-    .contact a:hover { border-color: var(--ink); }
+    .contact-lines a:hover { border-color: var(--ink); }
 
-    .contact .meta { color: var(--muted); }
-
-    footer {
-      margin-top: 3rem;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      color: #767676;
+    /* ---------- Footer ---------- */
+    footer.site {
+      border-top: 1px solid var(--line);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
     }
 
-    @media (max-width: 480px) {
-      h1 { font-size: 1.7rem; }
-      .tagline { font-size: 1.05rem; }
+    footer.site .fbrand {
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    footer.site .fmeta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+    }
+
+    footer.site .fmeta a { color: var(--muted); text-decoration: none; }
+    footer.site .fmeta a:hover { color: var(--ink); }
+
+    footer.site .copyright {
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      color: var(--faint);
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 620px) {
+      .focus-grid { grid-template-columns: 1fr; gap: 2rem; }
+      h1 { font-size: 1.85rem; }
+      .tagline { font-size: 1.2rem; }
+      h2 { font-size: 1.5rem; }
+      .nav-inner { padding: 0.85rem 1.25rem; }
+      .brand { display: none; }
+      .nav-links { width: 100%; justify-content: space-between; gap: 0.75rem; }
     }
   </style>
 </head>
 <body>
-  <main class="card">
-    <div class="mark">KTB Nutrition</div>
-
-    <h1>Katerina Thomas Boskova</h1>
-    <div class="role">Nutrition Consultant</div>
-    <div class="creds">Biologist &amp; researcher · PhD candidate, Charles University</div>
-
-    <p class="tagline">Evidence-led nutrition, tailored to real life.</p>
-
-    <div class="rule"></div>
-
-    <p class="about">
-      A holistic, one-to-one practice looking at what your body actually needs,
-      and helping you make changes you can stick with. Grounded in science and
-      nearly two decades of study across nutrition, biology, and behaviour.
-    </p>
-
-    <a class="cta" href="https://calendly.com/k-boskova/intro-call" target="_blank" rel="noopener">Book a complimentary 20-min call</a>
-
-    <div class="contact">
-      <a href="mailto:hello@ktbnutrition.com">hello@ktbnutrition.com</a>
-      <span class="meta">Prague, Czech Republic</span>
-      <span class="meta">Consultations in person or online</span>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">KTB Nutrition</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#focus">Focus</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#book">Book</a></li>
+      </ul>
     </div>
+  </header>
 
-    <footer>© 2026 Katerina Thomas Boskova</footer>
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="mark">KTB Nutrition</div>
+      <h1 class="serif">Katerina Thomas Boskova</h1>
+      <div class="role">Nutrition Consultant</div>
+      <div class="creds">Biologist &amp; researcher · PhD candidate, Charles University</div>
+      <p class="tagline serif">Evidence-led nutrition, tailored to real life.</p>
+      <p class="intro">A private nutrition consultancy for clients seeking thoughtful, research-informed support with digestive health, food intolerances, women's health, and lasting dietary change.</p>
+      <a class="cta" href="https://calendly.com/k-boskova/intro-call" target="_blank" rel="noopener">Book an initial consultation</a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="band about">
+      <div class="wrap">
+        <div class="eyebrow">About the practice</div>
+        <h2 class="serif">Clear, informed decisions about how you eat</h2>
+        <p>I help clients make clear, informed decisions about how they eat and understand why those decisions matter. My work draws on over fifteen years of studying the relationship between nutrition, biology, and behaviour.</p>
+        <p>My background is in psychology, biology, and microbiology, studied in the UK. I'm currently completing a PhD at the First Faculty of Medicine, Charles University in Prague, where I study the relationship between our environment and mental health.</p>
+        <p>I also trained intensively in whole-food cooking at a specialist culinary institute in Belgium, where I developed practical chef skills that inform how I think about food in real kitchens.</p>
+      </div>
+    </section>
+
+    <!-- Focus -->
+    <section id="focus" class="band">
+      <div class="wrap">
+        <div class="eyebrow">Areas of focus</div>
+        <h2 class="serif">Where I can help</h2>
+        <p class="focus-intro">I work across a range of nutritional concerns, always with attention to the behavioural, cultural, and psychological dimensions that shape how we eat and how we feel.</p>
+        <div class="focus-grid">
+          <div class="focus-item">
+            <h3>Digestive health &amp; food intolerances</h3>
+            <p>Bloating, discomfort, and unexplained reactions to food. I take a thorough, structured approach to identifying what is driving symptoms and building a dietary strategy that works within your daily life and remains practical over time.</p>
+          </div>
+          <div class="focus-item">
+            <h3>Women's health across the lifecycle</h3>
+            <p>Nutritional support through menstruation, fertility, pregnancy, perimenopause, and menopause. Each stage brings distinct physiological demands, and dietary guidance should reflect those differences with care and precision.</p>
+          </div>
+          <div class="focus-item">
+            <h3>Energy, mood &amp; cognitive performance</h3>
+            <p>Persistent fatigue, brain fog, and low mood can all be shaped by nutrition. I draw on both the nutritional and psychological evidence base to understand what is happening and identify what may help.</p>
+          </div>
+          <div class="focus-item">
+            <h3>Habits, behaviour &amp; navigating conflicting advice</h3>
+            <p>Understanding what to eat and changing long-standing patterns require equal attention. My training in psychology helps me support clients with clarity, structure, and an evidence-based framework they can trust.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="band">
+      <div class="wrap">
+        <div class="eyebrow">How I work</div>
+        <h2 class="serif">How I work with clients</h2>
+        <div class="step">
+          <div class="num serif">01</div>
+          <div>
+            <h3>An initial conversation</h3>
+            <p>A complimentary 20-minute call to understand your situation and determine whether my approach is the right fit. I'll be candid about whether I can help.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num serif">02</div>
+          <div>
+            <h3>A comprehensive assessment</h3>
+            <p>A detailed look at your health history, current dietary patterns, lifestyle, and goals. I consider the full context, including the psychological and cultural factors that influence how you eat.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num serif">03</div>
+          <div>
+            <h3>A bespoke plan with ongoing support</h3>
+            <p>You receive a tailored nutritional strategy with the reasoning behind every recommendation clearly explained. We continue working together, refining and adjusting as your needs evolve.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book / Contact -->
+    <section id="book" class="band contact-band">
+      <div class="wrap">
+        <div class="eyebrow">Get in touch</div>
+        <h2 class="serif">Book an initial consultation</h2>
+        <p class="copy">If you're considering nutritional support and would like to explore whether my practice is the right fit, I'd welcome hearing from you. The initial 20-minute consultation is complimentary.</p>
+        <p class="note">I respond to all enquiries within 48 hours.</p>
+        <a class="cta" href="https://calendly.com/k-boskova/intro-call" target="_blank" rel="noopener">Book a complimentary 20-min call</a>
+        <div class="contact-lines">
+          <a href="mailto:hello@ktbnutrition.com">hello@ktbnutrition.com</a>
+          <span>Prague, Czech Republic</span>
+          <span>Consultations in person or online, depending on logistics</span>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site">
+    <div class="fbrand">KTB Nutrition</div>
+    <div class="fmeta"><a href="mailto:hello@ktbnutrition.com">hello@ktbnutrition.com</a> · Prague, Czech Republic</div>
+    <div class="copyright">© 2026 Katerina Thomas Boskova</div>
+  </footer>
 </body>
 </html>
