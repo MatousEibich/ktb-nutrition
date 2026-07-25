@@ -32,7 +32,12 @@
       --muted: #666666;
       --faint: #767676;
       --line: #e6e6e6;
+      --accent: #4f7663;
+      --accent-soft: #aac1b1;
+      --accent-tint: #e9f0ec;
     }
+
+    ::selection { background: var(--accent-tint); }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -98,7 +103,7 @@
       white-space: nowrap;
     }
 
-    .nav-links a:hover { color: var(--ink); }
+    .nav-links a:hover { color: var(--accent); }
 
     /* ---------- Layout ---------- */
     section {
@@ -128,6 +133,13 @@
       padding: 5rem 1.5rem 4.5rem;
     }
 
+    .leaf-mark {
+      display: block;
+      width: 150px;
+      height: auto;
+      margin: 0 auto 1.75rem;
+    }
+
     h1 {
       font-weight: 400;
       font-size: 2.15rem;
@@ -154,7 +166,7 @@
     .tagline {
       font-size: 1.35rem;
       font-style: italic;
-      color: var(--ink);
+      color: var(--accent);
       margin-bottom: 1.5rem;
     }
 
@@ -168,17 +180,17 @@
     .cta {
       display: inline-block;
       padding: 0.9rem 1.8rem;
-      background: var(--ink);
+      background: var(--accent);
       color: var(--paper);
       text-decoration: none;
       font-size: 0.74rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      border: 1px solid var(--ink);
-      transition: background 0.2s ease, color 0.2s ease;
+      border: 1px solid var(--accent);
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     }
 
-    .cta:hover { background: var(--paper); color: var(--ink); }
+    .cta:hover { background: var(--paper); color: var(--accent); border-color: var(--accent); }
 
     /* ---------- Sections ---------- */
     .band {
@@ -219,7 +231,7 @@
 
     .step .num {
       font-size: 1.6rem;
-      color: #c9c9c9;
+      color: var(--accent-soft);
       line-height: 1;
       padding-top: 0.1rem;
     }
@@ -269,7 +281,7 @@
       transition: border-color 0.2s ease;
     }
 
-    .contact-lines a:hover { border-color: var(--ink); }
+    .contact-lines a:hover { color: var(--accent); border-color: var(--accent); }
 
     /* ---------- Footer ---------- */
     footer.site {
@@ -329,6 +341,7 @@
   <main id="top">
     <!-- Hero -->
     <section class="hero">
+      <img class="leaf-mark" src="/leaf-up.png" alt="" width="150" height="33" />
       <h1 class="serif">Katerina Thomas Boskova</h1>
       <div class="role">Nutrition Consultant</div>
       <div class="creds">Biologist &amp; researcher · PhD candidate, Charles University</div>
